@@ -102,12 +102,18 @@
         input.number {
             appearance: textfield;
         }
+        li.product {
+            margin-right: 80px;
+        }
         @media (max-width: 700px) {
             nav li.desktop {
                 display: none;
             }
             nav li.mobile{
                 display: block;
+            }
+            li.product {
+                margin-right: 0;
             }
         }   
     </style>
@@ -132,15 +138,15 @@
         </div>
         <div class="container">
             <ul class="d-flex my-2">
-                <li style="margin-right: 80px;">Product</li>
+                <li class="product">Product</li>
                 <li class="ms-5 me-5" > Quantity</li>
                 <li>Subtotal</li>
                 <li></li>
             </ul>
-            <div class="d-flex justify-content-between pe-5 product" data-price="1500000">
+            <div class="d-flex justify-content-between product" data-price="1500000">
                 <div class="d-flex align-items-center">
                     <img src="/images/iphone13.svg" alt="iPhone 13" width="100px" height="100px">
-                    <div class="d-block" style="max-width: 150px;">
+                    <div class="d-block" style="width: 150px;">
                         <p class="name my-1">IPhone 13</p>
                         <p class="price colored my-0">₦ 1,500,000</p>
                     </div>
@@ -161,10 +167,10 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-between mt-2 pe-5 product" data-price="850000">
+            <div class="d-flex justify-content-between mt-2 product" data-price="850000">
                 <div class="d-flex align-items-center">
                     <img src="/images/smartwatch.svg" alt="iPhone 13" width="100px" height="100px">
-                    <div class="d-block" style="max-width: 150px;">
+                    <div class="d-block" style="width: 150px;">
                         <p class="name my-1">Smart Watch Ultra</p>
                         <p class="price colored my-0 text-nowrap">₦ 850,000</p>
                     </div>
