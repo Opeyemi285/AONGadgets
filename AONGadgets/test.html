@@ -1,0 +1,29 @@
+<div class="quantity">
+  <button class="minus">-</button>
+  <input type="number" class="qty" value="1" min="1" />
+  <button class="plus">+</button>
+</div>
+
+<div class="quantity">
+  <button class="minus">-</button>
+  <input type="number" class="qty" value="1" min="1" />
+  <button class="plus">+</button>
+</div>
+
+<script>
+    document.querySelectorAll('.quantity').forEach(function (container) {
+    const input = container.querySelector('.qty');
+    const plusBtn = container.querySelector('.plus');
+    const minusBtn = container.querySelector('.minus');
+
+    plusBtn.addEventListener('click', function () {
+        input.value = parseInt(input.value) + 1;
+    });
+
+    minusBtn.addEventListener('click', function () {
+        if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+        }
+    });
+    });
+</script>
