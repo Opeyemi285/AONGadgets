@@ -105,6 +105,9 @@
         li.product {
             margin-right: 80px;
         }
+        div.product-info {
+            width: 150px;
+        }
         @media (max-width: 700px) {
             nav li.desktop {
                 display: none;
@@ -114,6 +117,19 @@
             }
             li.product {
                 margin-right: 0;
+            }
+            button.plus, button.minus, input.number {
+                width: 20px;
+            }
+            div.d-block p {
+                font-size: 10px;
+            }
+            div.product {
+                max-width: 380px;
+                overflow: hidden;
+            }
+            div.product-info {
+                max-width: 70px;
             }
         }   
     </style>
@@ -146,7 +162,7 @@
             <div class="d-flex justify-content-between product" data-price="1500000">
                 <div class="d-flex align-items-center">
                     <img src="/images/iphone13.svg" alt="iPhone 13" width="100px" height="100px">
-                    <div class="d-block" style="width: 150px;">
+                    <div class="d-block product-info">
                         <p class="name my-1">IPhone 13</p>
                         <p class="price colored my-0">₦ 1,500,000</p>
                     </div>
@@ -170,7 +186,7 @@
             <div class="d-flex justify-content-between mt-2 product" data-price="850000">
                 <div class="d-flex align-items-center">
                     <img src="/images/smartwatch.svg" alt="iPhone 13" width="100px" height="100px">
-                    <div class="d-block" style="width: 150px;">
+                    <div class="d-block product-info">
                         <p class="name my-1">Smart Watch Ultra</p>
                         <p class="price colored my-0 text-nowrap">₦ 850,000</p>
                     </div>
