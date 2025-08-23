@@ -93,9 +93,6 @@
             width: 200px;
             height: 50px;
         }
-        td.total {
-            text-decoration: underline;
-        }
         @media (max-width: 700px) {
             .item-name, .price, .subtotal {
                 font-size: .7rem;
@@ -178,14 +175,11 @@
             </table>
             <div class="total">
                 <h1 class="total-heading">Cart Total</h1>
-                <table class="w-100">
-                    <tbody>
-                        <tr>
-                            <td class="total">Subtotal</td>
-                            <td class="total">₦1500000</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="d-block justify-content-between" style="text-decoration: underline;">
+                    <p>Subtotal</p>
+                    <p>₦1500000</p>
+                </div>
+                
                 <div class="payment">
                     <label for="bankTrans"><input type="radio" id="bankTrans" name="payment"> Direct bank Transfer</label>
                     <br>
