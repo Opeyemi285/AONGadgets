@@ -96,6 +96,9 @@
         div.total-price {
             display: flex;
         }
+        p.total-para {
+            margin-right: 500px;
+        }
         @media (max-width: 700px) {
             .item-name, .price, .subtotal {
                 font-size: .7rem;
@@ -109,6 +112,9 @@
             .logo-img {
                 width: 120px;
                 height: 40px;
+            }
+            p.total-para {
+                margin-right: 0;
             }
             div.total-price {
                 display: flex;
@@ -184,7 +190,7 @@
                 <h1 class="total-heading">Cart Total</h1>
                 <hr>
                 <div class="total-price" style="text-decoration: underline;">
-                    <p style="margin-right: 500px;">Total</p>
+                    <p class="total-para">Total</p>
                     <p>₦1500000</p>
                 </div>
                 <hr>
