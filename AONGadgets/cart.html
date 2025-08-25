@@ -218,7 +218,7 @@
                 <hr>
                 <div class="total-price">
                     <p class="total-para">Total</p>
-                    <p>₦1500000</p>
+                    <p class="price-para">₦1500000</p>
                 </div>
                 <hr>
                 <button class="checkout"><a href="checkout.html">Proceed to Checkout</a></button>
@@ -233,7 +233,8 @@
         document.addEventListener('DOMContentLoaded', () => {
         // Select all the product items
         const productItems = document.querySelectorAll('.product');
-
+        const totalPrice = document.querySelector('.price-para')
+            totalPrice.innerHTML = "Hello world"
         productItems.forEach(item => {
             const increaseBtn = item.querySelector('.plus');
             const decreaseBtn = item.querySelector('.minus');
