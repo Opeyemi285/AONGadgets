@@ -227,65 +227,78 @@
     </main>
     <footer></footer>
     <script>
-
-        const cancelButtons = document.querySelectorAll('.cancel-button'); 
-
         document.addEventListener('DOMContentLoaded', () => {
-        // Select all the product items
-        const productItems = document.querySelectorAll('.product');
-        const totalPrice = document.querySelector('.price-para')
-            totalPrice.innerHTML = "Hello world"
-        productItems.forEach(item => {
-            const increaseBtn = item.querySelector('.plus');
-            const decreaseBtn = item.querySelector('.minus');
-            const quantityInput = item.querySelector('.quantity-input');
-            const subtotalSpan = item.querySelector('.subtotal');
-            const basePrice = parseInt(item.dataset.price, 10);
+            const productItems = document.querySelectorAll('.product');
+            const totalPriceEl = document.querySelector('.price-para');
+            const cancelButtons = document.querySelectorAll('.cancel-button');
 
-            // Function to update the subtotal
-            const updateSubtotal = () => {
-                const quantity = parseInt(quantityInput.value, 10);
-                const newSubtotal = quantity * basePrice;
-                subtotalSpan.innerText = `₦ ${newSubtotal.toLocaleString()}`;
+            // Function to calculate and update the total cart price
+            const updateCartTotal = () => {
+                let total = 0;
+                const currentProducts = document.querySelectorAll('.product');
+                currentProducts.forEach(item => {
+                    const subtotalText = item.querySelector('.subtotal').innerText;
+                    const subtotalValue = parseInt(subtotalText.replace(/₦|,|\s/g, ''), 10);
+                    total += subtotalValue;
+                });
+                totalPriceEl.innerText = `₦${total.toLocaleString()}`;
             };
 
-            // Event listener for the increase button
-            increaseBtn.addEventListener('click', () => {
-                quantityInput.value = parseInt(quantityInput.value, 10) + 1;
-                updateSubtotal();
-            });
+            // Event listeners for each product
+            productItems.forEach(item => {
+                const increaseBtn = item.querySelector('.plus');
+                const decreaseBtn = item.querySelector('.minus');
+                const quantityInput = item.querySelector('.quantity-input');
+                const subtotalSpan = item.querySelector('.subtotal');
+                const basePrice = parseInt(item.dataset.price, 10);
 
-            // Event listener for the decrease button
-            decreaseBtn.addEventListener('click', () => {
-                let quantity = parseInt(quantityInput.value, 10);
-                if (quantity > 1) {
-                    quantityInput.value = quantity - 1;
+                // Function to update the subtotal for a single product
+                const updateSubtotal = () => {
+                    const quantity = parseInt(quantityInput.value, 10);
+                    const newSubtotal = quantity * basePrice;
+                    subtotalSpan.innerText = `₦ ${newSubtotal.toLocaleString()}`;
+                    updateCartTotal(); // Update the total price whenever a subtotal changes
+                };
+
+                // Event listener for the increase button
+                increaseBtn.addEventListener('click', () => {
+                    quantityInput.value = parseInt(quantityInput.value, 10) + 1;
                     updateSubtotal();
-                }
+                });
+
+                // Event listener for the decrease button
+                decreaseBtn.addEventListener('click', () => {
+                    let quantity = parseInt(quantityInput.value, 10);
+                    if (quantity > 1) {
+                        quantityInput.value = quantity - 1;
+                        updateSubtotal();
+                    }
+                });
+
+                // Event listener for direct input changes
+                quantityInput.addEventListener('change', () => {
+                    let quantity = parseInt(quantityInput.value, 10);
+                    if (isNaN(quantity) || quantity < 1) {
+                        quantityInput.value = 1;
+                    }
+                    updateSubtotal();
+                });
             });
 
-            // Event listener for direct input changes
-            quantityInput.addEventListener('change', () => {
-                let quantity = parseInt(quantityInput.value, 10);
-                // Ensure the quantity is at least 1
-                if (isNaN(quantity) || quantity < 1) {
-                    quantityInput.value = 1;
-                }
-                updateSubtotal();
+            // Event listeners for cancel buttons
+            cancelButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    const rowToDelete = event.target.closest('.product');
+                    if (rowToDelete) {
+                        rowToDelete.remove();
+                        updateCartTotal(); // Update the total price when a product is removed
+                    }
+                });
             });
+
+            // Initial calculation of the total price on page load
+            updateCartTotal();
         });
-        cancelButtons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            // Find the closest parent with the class 'item-row'
-            const rowToDelete = event.target.closest('.product');
-            
-            // Check if a row was found before trying to remove it
-            if (rowToDelete) {
-                rowToDelete.remove();
-            }
-        });
-    });
-    });
     </script>
 </body>
 </html>
