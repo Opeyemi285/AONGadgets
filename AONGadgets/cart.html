@@ -111,6 +111,10 @@
         div.total-price p:last-of-type {
             text-decoration: underline;
         }
+        button.checkout {
+            border: none;
+            background-color: var(--primary-color);
+        }
         @media (max-width: 700px) {
             .item-name, .price, .subtotal {
                 font-size: .7rem;
@@ -202,17 +206,7 @@
                     <p>₦1500000</p>
                 </div>
                 <hr>
-                <div class="payment mb-5">
-                    <label for="bankTrans"><input type="radio" id="bankTrans" name="payment"> Direct bank Transfer</label>
-                    <br>
-                    <label for="checkPayment"><input type="radio" id="checkPayment" name="payment"> Check payment</label>
-                    <br>
-                    <label for="deliveryPayment"><input type="radio" id="deliveryPayment" name="payment"> Cash on delivery</label>
-                    <br>
-                    <label for="payPal"><input type="radio" id="payPal" name="payment"> PayPal</label>
-                    <br>
-                    <button>Place Your Order</button>
-                </div>
+                <button class="checkout"><a href="checkout.html">Proceed to Checkout</a></button>
             </div>
         </div>
     </main>
