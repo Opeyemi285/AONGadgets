@@ -1,0 +1,168 @@
+:root {
+  --primary-color: rgb(72, 19, 121);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand';
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li.mobile {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #f8f9fa;
+}
+
+nav input {
+  border-radius: 20px;
+  width: 50vw;
+  height: 40px;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+}
+
+nav input:focus {
+  outline: none;
+}
+
+small.text-center {
+  display: block;
+}
+
+small.text-center a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button.minus,
+button.plus {
+  background-color: rgba(72, 19, 121, 0.5);
+  color: white;
+  border: none;
+  width: 25px;
+}
+
+button.cancel-button {
+  background-color: transparent;
+  border: none;
+}
+
+.item-image {
+  height: 90px;
+}
+
+.plus,
+.minus {
+  height: 30px;
+  border-radius: 5px;
+}
+
+input.quantity-input {
+  width: 30px;
+  text-align: center;
+  margin: 2px;
+  border-radius: 5px;
+  border: none;
+}
+
+tr.product {
+  height: 100px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.logo-img {
+  width: 200px;
+  height: 50px;
+}
+
+div.total-price {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(72, 19, 121, 0.7);
+  color: white;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+div.total-price p {
+  margin: 0;
+}
+
+div.total-price p:first-of-type {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button.checkout {
+  border: none;
+  background-color: var(--primary-color);
+  display: block;
+  margin: auto;
+  padding: 7px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+button.checkout:hover {
+  background-color: rgba(72, 19, 121, 0.5);
+  transform: translate(5px, 5px);
+}
+
+button.checkout a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+
+  .item-name,
+  .price,
+  .subtotal {
+    font-size: .7rem;
+  }
+
+  nav li.desktop {
+    display: none;
+  }
+
+  nav li.mobile {
+    display: block;
+  }
+
+  .logo-img {
+    width: 120px;
+    height: 40px;
+  }
+
+  nav ul {
+    padding: 10px 10px;
+  }
+}

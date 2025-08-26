@@ -10,219 +10,87 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
     <title>E-Commerce site</title>
-    <style>
-        :root {
-            --primary-color: rgb(72, 19, 121);
-        }
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Quicksand';
-        }
-        nav li {
-            list-style-type: none;
-        }
-        nav li.mobile {
-            display: none;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--primary-color);
-        }
-        nav a:hover {
-            color: black;
-        }
-        nav ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 50px;
-            background-color: #f8f9fa;
-        }
-        nav input {
-            border-radius: 20px;
-            width: 50vw;
-            height: 40px;
-            border: 2px solid var(--primary-color);
-            padding: 10px;
-        }
-        nav input:focus {
-            outline: none;
-        }
-         small.text-center {
-            display: block;
-        }
-        small.text-center a {
-            text-decoration: none;
-            color: var(--primary-color);
-        }
-        button.minus, button.plus {
-            background-color: rgba(72, 19, 121, 0.5);
-            color: white;
-            border: none;
-            width: 25px;
-        }
-        button.cancel-button {
-            background-color: transparent;
-            border: none;
-        }
-        .item-image {
-            height:90px;
-        }
-        .plus, .minus {
-            height: 30px;
-            border-radius: 5px;
-        }
-        input.quantity-input {
-            width: 30px;
-            text-align: center;
-            margin: 2px;
-            border-radius: 5px;
-            border: none;
-        }
-        tr.product {
-            height: 100px;
-        }
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-        }
-        .logo-img {
-            width: 200px;
-            height: 50px;
-        }
-        div.total-price {
-            display: flex;
-            justify-content: space-between;
-            background-color: rgba(72, 19, 121, 0.7);
-            color: white;
-            padding: 5px 20px;
-            align-items: center;
-        }
-        div.total-price p {
-            margin: 0;
-        }
-        div.total-price p:first-of-type {
-            font-size: 20px;
-            font-weight: 700;
-        }
-        button.checkout {
-            border: none;
-            background-color: var(--primary-color);
-            display: block;
-            margin: auto;
-            padding: 7px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-        }
-        button.checkout:hover {
-            background-color: rgba(72, 19, 121, 0.5);
-            transform: translate(5px, 5px);
-        }
-        button.checkout a {
-            color: white;
-            text-decoration: none;
-            width: 100%;
-            height: 100%;
-        }
-        @media (max-width: 700px) {
-            .item-name, .price, .subtotal {
-                font-size: .7rem;
-            }
-            nav li.desktop {
-                display: none;
-            }
-            nav li.mobile{
-                display: block;
-            }
-            .logo-img {
-                width: 120px;
-                height: 40px;
-            }
-            nav ul {
-                padding: 10px 10px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="float-left">
-                <li><a href="/index.html"><img class="logo-img" src="./images/aon-logo.png" alt=""></a></li>
-                <li class="px-2 desktop"><a href="/index.html"></a> <input type="search" name="search" id="search" placeholder="Search..."></li>
-                <li class="desktop"><a href="/login.html"><i class="bi bi-person-circle"></i> Login</a>/<a href="/register.html">Register</a></li>
-                <li class="desktop"><a href="/favourite.html"><i class="bi bi-heart"></i></a></li>
-                <li class="desktop"><a href="#"><i class="bi bi-cart"></i></a></li>
-                <li class="mobile"><a href="#"><i class="bi bi-list"></i></a></li>
-            </ul> 
-        </nav>
-    </header>
-    <main>
-        <div class="hero">
-            <h1 class="text-center fw-lighter">Cart</h1>
-            <small class="text-center w-100">Home > <a href="#">Cart</a></small>
-        </div>
-        <div class="container">
-            <table class="w-100">
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-                <tr style="height: 100px;" class="product" data-price="1500000">
-                    <td class="d-flex align-items-center" >
-                        <div><img height="90px" src="/images/iphone13.svg" alt="iPhone 13"></div>
-                        <div class="product-info">
-                            <p class="item-name">IPhone 13</p>
-                            <p class="price">₦1500000</p>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap;">
-                        <button class="minus">-</button>
-                        <input class="quantity-input" style="width: 30px; text-align: center;"  value="1" min="1" readonly>
-                        <button class="plus">+</button>
-                    </td>
-                    <td class="subtotal" style="white-space: nowrap;">₦1500000</td>
-                    <td>
-                        <button class="cancel-button"><i class="bi bi-x-lg"></i></button>
-                    </td>
-                </tr>
-                <tr class="product" data-price="850000">
-                    <td class="d-flex align-items-center ">
-                        <div><img height="90px" src="/images/smartwatch.svg" alt="iPhone 13"></div>
-                        <div class="product-info">
-                            <p class="item-name ">Smart Watch Ultra</p>
-                            <p class="price">₦850000</p>
-                        </div>
-                    </td>
-                    <td style="white-space: nowrap;">
-                        <button class="minus">-</button>
-                        <input class="quantity-input" style="width: 30px; text-align: center;"  value="1" min="1" readonly>
-                        <button class="plus">+</button>
-                    </td>
-                    <td class="subtotal" style="white-space: nowrap;">₦850000</td>
-                    <td>
-                        <button class="cancel-button"><i class="bi bi-x-lg"></i></button>
-                    </td>
-                </tr>
-            </table>
-            <div class="total">
-                <h2 class="total-heading fw-lighter mt-5">Cart Total</h2>
-                <hr>
-                <div class="total-price">
-                    <p class="total-para">Total</p>
-                    <p class="price-para">₦1500000</p>
-                </div>
-                <hr>
-                <button class="checkout"><a href="checkout.html">Proceed to Checkout</a></button>
-            </div>
-        </div>
-    </main>
-    <footer></footer>
+<header>
+  <nav>
+    <ul class="float-left">
+      <li><a href="/index.html"><img class="logo-img" src="./images/aon-logo.png" alt=""></a></li>
+      <li class="px-2 desktop"><a href="/index.html"></a> <input type="search" name="search" id="search"
+          placeholder="Search..."></li>
+      <li class="desktop"><a href="/login.html"><i class="bi bi-person-circle"></i> Login</a>/<a
+          href="/register.html">Register</a></li>
+      <li class="desktop"><a href="/favourite.html"><i class="bi bi-heart-fill"></i></a></li>
+      <li class="desktop"><a href="#"><i class="bi bi-cart"></i></a></li>
+      <li class="mobile"><a href="#"><i class="bi bi-list"></i></a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="hero">
+    <h1 class="text-center fw-lighter">Cart</h1>
+    <small class="text-center w-100">Home > <a href="#">Cart</a></small>
+  </div>
+  <div class="container">
+    <table class="w-100">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+      <tr style="height: 100px;" class="product" data-price="1500000">
+        <td class="d-flex align-items-center">
+          <div><img height="90px" src="/images/iphone13.svg" alt="iPhone 13"></div>
+          <div class="product-info">
+            <p class="item-name">IPhone 13</p>
+            <p class="price">₦1500000</p>
+          </div>
+        </td>
+        <td style="white-space: nowrap;">
+          <button class="minus">-</button>
+          <input class="quantity-input" style="width: 30px; text-align: center;" value="1" min="1" readonly>
+          <button class="plus">+</button>
+        </td>
+        <td class="subtotal" style="white-space: nowrap;">₦1500000</td>
+        <td>
+          <button class="cancel-button"><i class="bi bi-x-lg"></i></button>
+        </td>
+      </tr>
+      <tr class="product" data-price="850000">
+        <td class="d-flex align-items-center ">
+          <div><img height="90px" src="/images/smartwatch.svg" alt="iPhone 13"></div>
+          <div class="product-info">
+            <p class="item-name ">Smart Watch Ultra</p>
+            <p class="price">₦850000</p>
+          </div>
+        </td>
+        <td style="white-space: nowrap;">
+          <button class="minus">-</button>
+          <input class="quantity-input" style="width: 30px; text-align: center;" value="1" min="1" readonly>
+          <button class="plus">+</button>
+        </td>
+        <td class="subtotal" style="white-space: nowrap;">₦850000</td>
+        <td>
+          <button class="cancel-button"><i class="bi bi-x-lg"></i></button>
+        </td>
+      </tr>
+    </table>
+    <div class="total">
+      <h2 class="total-heading fw-lighter mt-5">Cart Total</h2>
+      <hr>
+      <div class="total-price">
+        <p class="total-para">Total</p>
+        <p class="price-para">₦1500000</p>
+      </div>
+      <hr>
+      <button class="checkout"><a href="checkout.html">Proceed to Checkout</a></button>
+    </div>
+  </div>
+</main>
+<footer></footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const productItems = document.querySelectorAll('.product');
@@ -231,75 +99,74 @@
 
             // Function to calculate and update the total cart price
             const updateCartTotal = () => {
-                let total = 0;
-                const currentProducts = document.querySelectorAll('.product');
-                currentProducts.forEach(item => {
-                    const subtotalText = item.querySelector('.subtotal').innerText;
-                    const subtotalValue = parseInt(subtotalText.replace(/₦|,|\s/g, ''), 10);
-                    total += subtotalValue;
-                });
-                totalPriceEl.innerText = `₦${total.toLocaleString()}`;
+              let total = 0;
+              const currentProducts = document.querySelectorAll('.product');
+              currentProducts.forEach(item => {
+                const subtotalText = item.querySelector('.subtotal').innerText;
+                const subtotalValue = parseInt(subtotalText.replace(/₦|,|\s/g, ''), 10);
+                total += subtotalValue;
+              });
+              totalPriceEl.innerText = `₦${total.toLocaleString()}`;
             };
 
             // Event listeners for each product
             productItems.forEach(item => {
-                const increaseBtn = item.querySelector('.plus');
-                const decreaseBtn = item.querySelector('.minus');
-                const quantityInput = item.querySelector('.quantity-input');
-                const subtotalSpan = item.querySelector('.subtotal');
-                const basePrice = parseInt(item.dataset.price, 10);
+              const increaseBtn = item.querySelector('.plus');
+              const decreaseBtn = item.querySelector('.minus');
+              const quantityInput = item.querySelector('.quantity-input');
+              const subtotalSpan = item.querySelector('.subtotal');
+              const basePrice = parseInt(item.dataset.price, 10);
 
-                // Function to update the subtotal for a single product
-                const updateSubtotal = () => {
-                    const quantity = parseInt(quantityInput.value, 10);
-                    const newSubtotal = quantity * basePrice;
-                    subtotalSpan.innerText = `₦ ${newSubtotal.toLocaleString()}`;
-                    updateCartTotal(); // Update the total price whenever a subtotal changes
-                };
+              // Function to update the subtotal for a single product
+              const updateSubtotal = () => {
+                const quantity = parseInt(quantityInput.value, 10);
+                const newSubtotal = quantity * basePrice;
+                subtotalSpan.innerText = `₦ ${newSubtotal.toLocaleString()}`;
+                updateCartTotal(); // Update the total price whenever a subtotal changes
+              };
 
-                // Event listener for the increase button
-                increaseBtn.addEventListener('click', () => {
-                    quantityInput.value = parseInt(quantityInput.value, 10) + 1;
-                    updateSubtotal();
-                });
+              // Event listener for the increase button
+              increaseBtn.addEventListener('click', () => {
+                quantityInput.value = parseInt(quantityInput.value, 10) + 1;
+                updateSubtotal();
+              });
 
-                // Event listener for the decrease button
-                decreaseBtn.addEventListener('click', () => {
-                    let quantity = parseInt(quantityInput.value, 10);
-                    if (quantity > 1) {
-                        quantityInput.value = quantity - 1;
-                        updateSubtotal();
-                    }
-                });
+              // Event listener for the decrease button
+              decreaseBtn.addEventListener('click', () => {
+                let quantity = parseInt(quantityInput.value, 10);
+                if (quantity > 1) {
+                  quantityInput.value = quantity - 1;
+                  updateSubtotal();
+                }
+              });
 
-                // Event listener for direct input changes
-                quantityInput.addEventListener('change', () => {
-                    let quantity = parseInt(quantityInput.value, 10);
-                    if (isNaN(quantity) || quantity < 1) {
-                        quantityInput.value = 1;
-                    }
-                    updateSubtotal();
-                });
+              // Event listener for direct input changes
+              quantityInput.addEventListener('change', () => {
+                let quantity = parseInt(quantityInput.value, 10);
+                if (isNaN(quantity) || quantity < 1) {
+                  quantityInput.value = 1;
+                }
+                updateSubtotal();
+              });
             });
 
             // Event listeners for cancel buttons
             cancelButtons.forEach(button => {
-                button.addEventListener('click', function(event) {
-                    const rowToDelete = event.target.closest('.product');
-                    if (rowToDelete) {
-                        rowToDelete.remove();
-                        updateCartTotal(); // Update the total price when a product is removed
-                    }
-                });
+              button.addEventListener('click', function (event) {
+                const rowToDelete = event.target.closest('.product');
+                if (rowToDelete) {
+                  rowToDelete.remove();
+                  updateCartTotal(); // Update the total price when a product is removed
+                }
+              });
             });
 
             // Initial calculation of the total price on page load
             updateCartTotal();
-        });
+          });
     </script>
 </body>
 </html>
-
 
 
 
