@@ -65,6 +65,7 @@ div.mobile-menu ul {
 }
 div.mobile-menu ul a {
     text-decoration: none;
+    color: var(--primary-color);
 }
 div.mobile-menu ul a:hover{
     color: rgba(72,19,121,0.3);
