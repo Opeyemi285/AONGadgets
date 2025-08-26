@@ -13,7 +13,7 @@
     <title>E-Commerce site</title>
     <link rel="stylesheet" href="/index.css">
 </head>
-<body id="body">
+<body>
     <header>
       <nav>
         <ul class="float-left">
@@ -704,7 +704,6 @@
   <footer></footer>
 
   <script>
-    const body = document.getElementById('body')
     const menu = document.getElementById('menu')
     const closeMenu = document.getElementById('closeMenu')
     const mobileMenu = document.querySelector('div.mobile-menu')
@@ -717,11 +716,9 @@
 
     menu.addEventListener('click', () => {
         mobileMenu.style.display = 'block';
-        body.style.filter = "4px"
     })
     closeMenu.addEventListener('click', () => {
         mobileMenu.style.display = 'none';
-        body.style.filter = "0px"
     })
 
     scrollLeft.addEventListener("click", () => {
