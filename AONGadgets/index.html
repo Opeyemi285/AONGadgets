@@ -74,7 +74,7 @@
         </div>
       </div>
       <ol class="categories-list">
-        <li class="list">
+        <li class="list" id="targetStart">
           <div class="icon-wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Headphones-Cable--Streamline-Freehand"
               height="24" width="24">
@@ -233,7 +233,7 @@
           </div>
           <a href="">Home & Office Gadgets</a>
         </li>
-        <li class="list">
+        <li class="list" id="targetEnd">
           <div class="icon-wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Wifi-Laptop--Streamline-Freehand"
               height="24" width="24">
@@ -295,7 +295,7 @@
             <img src="/images/pngwing.com - 2022-04-03T115652.svg">
           </div>
           <div class="product-details">
-            <h3>Oculus Rift S</h3>
+            <h3>VR Set 6</h3>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14" id="Heart--Streamline-Flex">
               <desc>
                 Heart Streamline Icon: https://streamlinehq.com
@@ -694,6 +694,38 @@
     </section>
   </main>
   <footer></footer>
-  <script src="/index.js"></script>
+
+  <script>
+    const scrollLeft = document.querySelector(".left");
+    const scrollRight = document.querySelector(".right");
+    const scrollContainer = document.querySelector(".categories-list");
+    const scrollItem = document.querySelector(".list");
+    const scrollItemStyle = window.getComputedStyle(scrollItem);
+    const scrollItemMargin = scrollItem.offsetWidth + parseInt(scrollItemStyle.marginRight);
+
+    /* function updateButtons() {
+        scrollLeft.disabled = scrollContainer.scrollLeft <= 0;
+
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        scrollRight.disabled = scrollContainer.scrollLeft >= maxScroll;
+      }*/
+
+    scrollLeft.addEventListener("click", () => {
+      scrollContainer.scrollBy({
+        left: -scrollItemMargin,
+        behavior: "smooth"
+      });
+    });
+
+    scrollRight.addEventListener("click", () => {
+      scrollContainer.scrollBy({
+        left: scrollItemMargin,
+        behavior: "smooth"
+      });
+    });
+
+    /*scrollContainer.addEventListener("scroll", updateButtons);
+    updateButtons();*/
+  </script>
 </body>
 </html>
