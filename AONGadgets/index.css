@@ -356,23 +356,6 @@ section {
     .subtotal {
       font-size: .7rem;
     }
-  
-    nav li.desktop {
-      display: none;
-    }
-  
-    nav li.mobile {
-      display: block;
-    }
-  
-    .logo-img {
-      width: 120px;
-      height: 40px;
-    }
-  
-    nav ul {
-      padding: 10px 10px;
-    }
   #hero {
     height: 40vh;
   }
@@ -389,7 +372,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 100vw; */
     height: auto;
   } 
   #hero .the-future {
@@ -420,6 +402,22 @@ section {
 }
 
 @media (max-width: 540px) {
+    nav li.desktop {
+      display: none;
+    }
+  
+    nav li.mobile {
+      display: block;
+    }
+  
+    .logo-img {
+      width: 120px;
+      height: 40px;
+    }
+  
+    nav ul {
+      padding: 10px 10px;
+    }
   #hero {
       height: 40vh;
     }
