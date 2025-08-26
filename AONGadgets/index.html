@@ -703,13 +703,6 @@
     const scrollItemStyle = window.getComputedStyle(scrollItem);
     const scrollItemMargin = scrollItem.offsetWidth + parseInt(scrollItemStyle.marginRight);
 
-    /* function updateButtons() {
-        scrollLeft.disabled = scrollContainer.scrollLeft <= 0;
-
-        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-        scrollRight.disabled = scrollContainer.scrollLeft >= maxScroll;
-      }*/
-
     scrollLeft.addEventListener("click", () => {
       scrollContainer.scrollBy({
         left: -scrollItemMargin,
@@ -723,9 +716,6 @@
         behavior: "smooth"
       });
     });
-
-    /*scrollContainer.addEventListener("scroll", updateButtons);
-    updateButtons();*/
   </script>
 </body>
 </html>
