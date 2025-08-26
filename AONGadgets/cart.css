@@ -56,7 +56,6 @@ div.mobile-menu {
     z-index: 500; 
     line-height: 50px; 
     padding: 10px 30px;
-    backdrop-filter: blur(10px);
 }
 div.mobile-menu ul {
     list-style-type: none;
