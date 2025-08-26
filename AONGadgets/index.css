@@ -54,14 +54,16 @@ nav li.mobile {
 div.mobile-menu {
     display: none;
     height: 100vh; 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(72, 19, 121, .1);
     position: fixed; 
     right: 0; 
     top: 0; 
     z-index: 500; 
     line-height: 50px; 
     padding: 10px 30px;
-    backdrop-filter: blur(10px);
+    width: 100vw;
+    justify-content: right;
+    backdrop-filter: blur(30px);
 }
 div.mobile-menu ul {
     list-style-type: none;
