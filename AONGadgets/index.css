@@ -218,7 +218,10 @@ section {
   display: flex;
   align-items: baseline;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.5s ease-in-out; 
+  overflow-x: hidden;
   padding: 20px 0;
 }
 
