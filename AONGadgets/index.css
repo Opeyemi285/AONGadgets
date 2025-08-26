@@ -51,6 +51,21 @@ nav input:focus {
 nav li.mobile {
   display: none;
 }
+div.mobile-menu {
+    display: none;
+    height: 100vh; 
+    background-color: white;
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    z-index: 500; 
+    line-height: 50px; 
+    padding: 10px 30px;
+}
+div.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
 
 .logo-img {
   width: 200px;
