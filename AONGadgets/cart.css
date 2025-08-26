@@ -50,7 +50,7 @@ div.mobile-menu {
     display: none;
     height: 100vh; 
     background-color: rgb(72, 19, 121);
-    position: absolute; 
+    position: fixed; 
     right: 0; 
     top: 0; 
     z-index: 500; 
