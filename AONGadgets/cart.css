@@ -49,7 +49,7 @@ nav input:focus {
 div.mobile-menu {
     display: none;
     height: 100vh; 
-    background-color: rgba(72, 19, 121, 0.5);
+    background-color: rgb(72, 19, 121);
     position: absolute; 
     right: 0; 
     top: 0; 
