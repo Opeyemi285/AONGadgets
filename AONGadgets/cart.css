@@ -49,13 +49,14 @@ nav input:focus {
 div.mobile-menu {
     display: none;
     height: 100vh; 
-    background-color: rgb(72, 19, 121);
+    background-color: rgba(72, 19, 121, 0.5);
     position: fixed; 
     right: 0; 
     top: 0; 
     z-index: 500; 
     line-height: 50px; 
     padding: 10px 30px;
+    backdrop-filter: blur(10px);
 }
 div.mobile-menu ul {
     list-style-type: none;
