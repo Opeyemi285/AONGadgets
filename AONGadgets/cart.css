@@ -57,6 +57,7 @@ div.mobile-menu {
     line-height: 50px; 
     padding: 10px 30px;
     backdrop-filter: blur(10px);
+    transition: all .3s ease;
 }
 div.mobile-menu ul {
     list-style-type: none;
