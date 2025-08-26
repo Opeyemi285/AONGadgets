@@ -65,6 +65,13 @@ div.mobile-menu {
 div.mobile-menu ul {
     list-style-type: none;
     padding: 0;
+    color: var(--primary-color);
+}
+div.mobile-menu ul a {
+    text-decoration: none;
+}
+div.mobile-menu ul a:hover{
+    color: rgba(72,19,121,0.3);
 }
 
 .logo-img {
