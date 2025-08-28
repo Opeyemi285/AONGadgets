@@ -51,6 +51,7 @@ nav input:focus {
 nav li.mobile {
   display: none;
 }
+
 div.mobile-menu {
     display: none;
     height: 100vh; 
@@ -99,7 +100,7 @@ section {
   width: 70%;
 }
 
-#hero h4, #hero span {
+#hero h4, #hero span{
   color: #fff;
   font-size: 10px;
   text-align: left;
@@ -177,7 +178,6 @@ section {
   box-shadow: 0 5px 15px rgba(72,19,121,0.3);
   transform: translateY(5px);
 }
-
 
 .shop-now {
   background-color: transparent;
@@ -385,6 +385,53 @@ section {
   align-self: last baseline;
 }
 
+#best-deals {
+  background-color: #f8f9fa;
+  padding-top: 40px;
+}
+
+#best-deals .categories-header {
+    border-bottom: 2px solid #ebecec;
+}
+
+.deals-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100vw;
+  height: 60vh;
+}
+
+.deals-left {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 12px;
+  height: 90%;
+}
+
+.deals-right-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 12px;
+  height: 90%;
+  gap: 20px;
+}
+
+.deals-right {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  height: 100%;
+  width: 15vw;
+}
+
+.deals-right-container img {
+  height: 100px;
+  width: auto;
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
@@ -415,8 +462,10 @@ section {
   }
   .products {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center; 
+    scale: 0.75;
+    margin: -4%;
   }
 }
 
