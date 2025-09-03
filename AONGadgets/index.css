@@ -45,8 +45,8 @@ nav ul {
   padding: 10px;
 }
 input.mobile {
-  width: 80%; 
-  outline: none;
+  width: 80%;
+  display: block;
 }
 
 .input:focus {
