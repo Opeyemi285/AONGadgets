@@ -47,6 +47,7 @@ nav ul {
 input.mobile {
   width: 80%;
   display: block;
+  margin: auto;
 }
 
 .input:focus {
