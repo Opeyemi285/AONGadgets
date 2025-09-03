@@ -45,6 +45,7 @@ nav ul {
   padding: 10px;
 }
 input.mobile {
+  display: none;
   width: 80%;
   display: block;
   margin: auto;
@@ -542,6 +543,9 @@ svg:active #Vector {
   }
 
   nav li.mobile {
+    display: block;
+  }
+  input.mobile {
     display: block;
   }
 
