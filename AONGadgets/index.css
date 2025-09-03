@@ -37,15 +37,19 @@ nav ul {
   background-color: #f8f9fa;
 }
 
-nav input {
+.input {
   border-radius: 20px;
   width: 50vw;
   height: 40px;
   border: 2px solid var(--primary-color);
   padding: 10px;
 }
+input.mobile {
+  width: 80%; 
+  outline: none;
+}
 
-nav input:focus {
+.input:focus {
   outline: none;
 }
 
