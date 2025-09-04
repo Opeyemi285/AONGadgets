@@ -24,7 +24,16 @@ nav a {
   text-decoration: none;
   color: var(--primary-color);
 }
-
+span.cart-counter {
+    background-color: rgb(72, 19, 121);
+    color: white;
+    border-radius: 50%;
+    width: 12px;
+    text-align: center;
+    font-size: 8px;
+    height: 12px;
+    position: absolute;
+}
 nav a:hover {
   color: black;
 }
