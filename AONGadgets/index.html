@@ -38,7 +38,7 @@
         <li><a href="/login.html"><i class="bi bi-person-circle"></i> Login</a>/<a href="/register.html">Register</a>
         </li>
         <li><a href="/favourite.html"><i class="bi bi-heart-fill"></i> Favourites</a></li>
-        <li><a href="/cart.html"><i class="bi bi-cart"></i> Cart</a>(<span class="cart-counter" id="cartCounter"></span>)</li>
+        <li><a href="/cart.html"><i class="bi bi-cart"></i> Cart</a></li>
       </ul>
     </div>
   </header>
@@ -926,7 +926,7 @@
     // Loop through each button and add a click event listener
     addToCartBtns.forEach(button => {
       button.addEventListener('click', () => {
-        cartCounter.style.display = 'inline'; // Show the cart counter when an item is added
+        cartCounter.style.display = 'inlinec'; // Show the cart counter when an item is added
         // Only proceed if the button is not already disabled
         if (!button.disabled) {
           // Increment the item count
