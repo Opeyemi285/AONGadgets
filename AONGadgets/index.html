@@ -22,7 +22,7 @@
     <nav>
       <ul class="float-left">
         <li><a href="#"><img class="logo-img" src="./images/aon-logo.png" alt="AON Gadgets logo image"></a></li>
-        <li class="px-2 desktop"><input class="input" type="search" name="search" id="search" placeholder="Search..."></li>
+        <li class="px-2 desktop"><input type="search" name="search" id="search" placeholder="Search..."></li>
         <li class="desktop"><a href="/login.html"><i class="bi bi-person-circle"></i> Login</a>/<a
             href="/register.html">Register</a></li>
         <li class="desktop"><a href="/favourite.html"><i class="bi bi-heart-fill"></i></a></li>
@@ -32,7 +32,7 @@
     </nav>
     <div class="mobile-menu">
       <ul>
-        <li id="closeMenu"><a href="#"><i class="bi bi-x-lg"></i></a></li>
+        <li id="closeMenu" style="width: 15px;"><a href="#"><i class="bi bi-x-lg"></i></a></li>
         <li><a href="/login.html"><i class="bi bi-person-circle"></i> Login</a>/<a href="/register.html">Register</a>
         </li>
         <li><a href="/favourite.html"><i class="bi bi-heart-fill"></i> Favourites</a></li>
@@ -42,7 +42,7 @@
   </header>
 
   <main>
-    <input class="mobile input" type="search" name="search" id="search" placeholder="Search...">
+    <input type="search" name="search" id="search" placeholder="Search...">
     <section id="hero">
       <div class="the-future">
         <div class="hero-text">
@@ -727,11 +727,9 @@
 
     menu.addEventListener('click', () => {
       mobileMenu.style.display = 'flex';
-      menu.style.display = 'none';
     })
     closeMenu.addEventListener('click', () => {
       mobileMenu.style.display = 'none';
-      menu.style.display = 'block';
     })
 
     scrollLeft.addEventListener("click", () => {
