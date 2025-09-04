@@ -551,6 +551,9 @@ svg:active #Vector {
   nav li.mobile {
     display: block;
   }
+  input.mobile {
+  display: block;
+}
 
   .logo-img {
     width: 120px;
