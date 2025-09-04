@@ -44,11 +44,13 @@ nav ul {
   border: 2px solid var(--primary-color);
   padding: 10px;
 }
+
 input.mobile {
   display: none;
   width: 80%;
   margin: auto;
 }
+
 nav input {
   border-radius: 20px;
   width: 50vw;
@@ -57,7 +59,8 @@ nav input {
   padding: 10px;
 }
 
-nav input, input.mobile {
+nav input,
+input.mobile {
   outline: none;
 }
 
@@ -110,6 +113,7 @@ section {
   width: 100%;
   height: 70vh;
 }
+
 /* ############################################## */
 #hero h2 {
   font-size: 24px;
@@ -551,9 +555,10 @@ svg:active #Vector {
   nav li.mobile {
     display: block;
   }
+
   input.mobile {
-  display: block;
-}
+    display: block;
+  }
 
   .logo-img {
     width: 120px;
@@ -568,7 +573,7 @@ svg:active #Vector {
     height: 65vh;
   }
 
-  #hero .the-future{
+  #hero .the-future {
     height: 100%;
   }
 
@@ -640,8 +645,8 @@ svg:active #Vector {
     width: 60%;
   }
 
-    .right-text h4,
-    .right-text span {
+  .right-text h4,
+  .right-text span {
     width: 80%;
   }
 
@@ -655,13 +660,14 @@ svg:active #Vector {
     height: 40vh;
   }
 
-  #hero h2, .categories-header h4 {
+  #hero h2,
+  .categories-header h4 {
     font-size: 16px;
     padding-top: 20px;
   }
 
   #hero h4,
-  #hero span{
+  #hero span {
     font-size: 8px;
   }
 
@@ -681,7 +687,9 @@ svg:active #Vector {
     padding: 10px 20px;
     font-size: 12px;
   }
-  .categories-header a, .categories-header .scroll-arrows {
+
+  .categories-header a,
+  .categories-header .scroll-arrows {
     font-size: 10px;
     margin-top: 12px;
   }
@@ -708,9 +716,9 @@ svg:active #Vector {
     margin: -2% -8vw;
   }
 
-  /* .products::-webkit-scrollbar {
-    height: 20px;
-  } */
+  .products::-webkit-scrollbar {
+    height: 0;
+  }
 
   .deals-container {
     flex-direction: column;
@@ -718,13 +726,17 @@ svg:active #Vector {
     width: 100;
     margin: 20px -2%;
   }
-  .deals-left, .deals-right-container {
+
+  .deals-left,
+  .deals-right-container {
     width: 95%;
     height: auto;
   }
+
   .deals-right-container {
     flex-direction: row;
   }
+
   .deals-right {
     width: 40vw;
   }
@@ -734,9 +746,11 @@ svg:active #Vector {
   #hero {
     height: 42vh;
   }
+
   .products {
     height: 35vh;
   }
+
   .product-item {
     scale: 0.80;
     margin-left: -5%;
@@ -747,16 +761,18 @@ svg:active #Vector {
   .products {
     height: 30vh;
   }
-    .deals-right {
-      width: 38vw;
-      background-size: 35% !important;
-    }
+
+  .deals-right {
+    width: 38vw;
+    background-size: 35% !important;
+  }
 }
 
 @media (max-width: 320px) {
   #hero {
     height: 45vh;
   }
+
   #hero h2 {
     font-size: 14px;
     margin-bottom: 0;
@@ -764,33 +780,42 @@ svg:active #Vector {
     z-index: 10;
     font-weight: 600;
   }
+
   .the-future button {
     padding: 6px 15px;
     font-size: 10px;
     margin-top: 10px;
   }
+
   .products {
     height: 45vh;
   }
+
   .product-item {
     scale: 0.55;
     margin-right: -20%;
     margin-left: -10%;
   }
-  .product-details h3, .product-details p {
-    font-size: 16px; 
+
+  .product-details h3,
+  .product-details p {
+    font-size: 16px;
   }
+
   .shop-now {
     margin-top: 0;
   }
+
   .deals-container {
     width: 100%;
   }
+
   .deals-right {
     width: 36vw;
   }
-    .right-text h4,
-    .right-text span {
+
+  .right-text h4,
+  .right-text span {
     width: 100%;
   }
 }
