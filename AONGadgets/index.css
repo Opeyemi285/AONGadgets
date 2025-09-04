@@ -114,7 +114,6 @@ section {
   height: 70vh;
 }
 
-/* ############################################## */
 #hero h2 {
   font-size: 24px;
   width: 70%;
@@ -348,6 +347,7 @@ section {
 .products .product-item {
   width: 200px;
   height: 250px;
+  transition: all .3s ease-in-out;
 }
 
 .products .product-item .product-img {
@@ -355,21 +355,49 @@ section {
   height: 200px;
   background-color: #f8f9fa;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px;
   border-radius: 13px;
   margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
 
 .product-img img {
   width: 120px;
   height: 120px;
-  transition: all .3s ease-in-out;
 }
 
-.product-img:hover img {
-  transform: scale(1.15);
+.cart-button {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  padding: 10px 10px;
+  width: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all .3s ease;
+  transform: translateY(100%);
+}
+
+.cart-button:hover {
+  background-color: rgb(100, 50, 170);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
+}
+
+.product-img:hover .cart-button {
+  transform: translateY(-40%);
 }
 
 .product-details {
