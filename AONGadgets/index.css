@@ -48,7 +48,6 @@ input.mobile {
   display: none;
   width: 80%;
   margin: auto;
-  outline: none;
 }
 nav input {
   border-radius: 20px;
@@ -56,10 +55,9 @@ nav input {
   height: 40px;
   border: 2px solid var(--primary-color);
   padding: 10px;
-  outline: none;
 }
 
-nav input:focus {
+nav input, input.mobile {
   outline: none;
 }
 
