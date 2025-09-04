@@ -930,10 +930,10 @@
 
     
     menu.addEventListener('click', () => {
-      mobileMenu.style.display = 'flex';
+      mobileMenu.showModal();
     })
     closeMenu.addEventListener('click', () => {
-      mobileMenu.style.display = 'none';
+      mobileMenu.close();
     })
 
     scrollLeft.addEventListener("click", () => {
