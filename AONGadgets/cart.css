@@ -47,28 +47,29 @@ nav input:focus {
   outline: none;
 }
 div.mobile-menu {
-    display: none;
-    height: 100vh; 
-    background-color: rgba(72, 19, 121, 0.5);
-    position: fixed; 
-    right: 0; 
-    top: 0; 
-    z-index: 500; 
-    line-height: 50px; 
-    padding: 10px 30px;
-    backdrop-filter: blur(10px);
+  display: none;
+  height: 100vh;
+  background-color: rgba(72, 19, 121, 0.5);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  line-height: 50px;
+  padding: 10px 30px;
+  backdrop-filter: blur(10px);
 }
 div.mobile-menu ul {
-    list-style-type: none;
-    padding: 0;
-    color: var(--primary-color);
+  list-style-type: none;
+  padding: 0;
+  color: var(--primary-color);
 }
 div.mobile-menu ul a {
-    text-decoration: none;
-    color: var(--primary-color);
+  text-decoration: none;
+  color: var(--primary-color);
 }
-div.mobile-menu ul a:hover{
-    color: rgba(72,19,121,0.3);
+
+div.mobile-menu ul a:hover {
+  color: rgba(72, 19, 121, 0.3);
 }
 
 small.text-center {
