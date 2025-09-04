@@ -926,7 +926,7 @@
     // Loop through each button and add a click event listener
     addToCartBtns.forEach(button => {
       button.addEventListener('click', () => {
-        // cartCounter.style.display = 'block'; // Show the cart counter when an item is added
+        cartCounter.style.display = 'block'; // Show the cart counter when an item is added
         // Only proceed if the button is not already disabled
         if (!button.disabled) {
           // Increment the item count
