@@ -27,7 +27,7 @@
             href="/register.html">Register</a></li>
         <li class="desktop"><a href="/favourite.html"><i class="bi bi-heart-fill"></i></a></li>
         <li class="desktop"><a href="/cart.html"><i class="bi bi-cart"></i></a>
-          <span class="cart-counter">1</span>
+          <span class="cart-counter" id="cartCounter"></span>
         </li>
         <li class="mobile" id="menu"><a href="#"><i class="bi bi-list"></i></a></li>
       </ul>
@@ -914,9 +914,33 @@
     const scrollRight = document.querySelector(".right");
     const scrollContainer = document.querySelector(".categories-list");
     const scrollItem = document.querySelector(".list");
+    const cartCounter = document.getElementById('cartCounter');
+    const addToCartButtons = document.querySelectorAll('.cart-button');
     const scrollItemStyle = window.getComputedStyle(scrollItem);
     const scrollItemMargin = scrollItem.offsetWidth + parseInt(scrollItemStyle.marginRight);
 
+    const addToCartBtns = document.querySelectorAll('.cart-button');
+
+    // Initialize the item count
+    let itemCount = 0;
+
+    // Loop through each button and add a click event listener
+    addToCartBtns.forEach(button => {
+      button.addEventListener('click', () => {
+        cartCounter.style.display = 'block'; // Show the cart counter when an item is added
+        // Only proceed if the button is not already disabled
+        if (!button.disabled) {
+          // Increment the item count
+          itemCount++;
+
+          // Update the counter display
+          cartCounter.textContent = itemCount;
+
+          // Disable the button to prevent multiple clicks
+          button.disabled = true;
+        }
+      });
+    });
     menu.addEventListener('click', () => {
       mobileMenu.style.display = 'flex';
     })

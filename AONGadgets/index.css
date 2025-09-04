@@ -25,6 +25,7 @@ nav a {
   color: var(--primary-color);
 }
 span.cart-counter {
+    display: none;
     background-color: rgb(72, 19, 121);
     color: white;
     border-radius: 50%;
