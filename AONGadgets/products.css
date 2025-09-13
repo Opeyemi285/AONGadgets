@@ -128,8 +128,6 @@ section.categories-list {
   height: 100vh;
   width: fit-content;
   padding: 20px;
-  position: fixed;
-  left: 0;
 }
 section.categories-list ul {
   list-style-type: none;
