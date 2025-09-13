@@ -125,11 +125,8 @@ main {
 }
 
 section.categories-list {
-  position: sticky;
-  left: 12px;
+  height: 100%;
   width: fit-content;
-  border: 1px solid var(--primary-color);
-  padding: 15px;
 }
 section.categories-list ul {
   list-style-type: none;
