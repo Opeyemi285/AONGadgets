@@ -130,8 +130,8 @@ section.categories-list {
   padding: 20px;
   position: fixed;
   left: 0;
-  /* position: fixed;
-  left: 0; */
+  position: fixed;
+  left: 0;
 }
 section.categories-list ul {
   list-style-type: none;
