@@ -125,9 +125,11 @@ main {
 }
 
 section.categories-list {
+  height: 100vh;
   width: fit-content;
-  border: 1px solid var(--primary-color);
-  padding: 15px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
 }
 section.categories-list ul {
   list-style-type: none;
@@ -139,6 +141,115 @@ section.categories-list ul h1 {
 section.categories-list ul a {
   color: #000;
   font-size: 1.1rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 40px;
+  gap: 60px;
+  grid-row-gap: 40px;
+}
+
+.products .product-item {
+  width: 200px;
+  height: 250px;
+  transition: all .3s ease-in-out;
+}
+
+.products .product-item .product-img {
+  width: 200px;
+  height: 200px;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 13px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+}
+
+.product-img img {
+  width: 120px;
+  height: 120px;
+}
+
+.cart-button {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  padding: 10px 10px;
+  width: 160px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all .3s ease;
+  transform: translateY(100%);
+}
+
+.cart-button:hover {
+  background-color: rgb(100, 50, 170);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
+}
+
+.product-img:hover .cart-button {
+  transform: translateY(-40%);
+}
+
+.product-details {
+  display: grid;
+  grid-template-columns: 80% 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.product-details h3 {
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.product-details svg {
+  width: 15px;
+  height: 15px;
+}
+
+.product-details svg:hover {
+  cursor: pointer;
+}
+
+.product-details svg #Vector {
+  fill: none;
+  transition: all .3s ease-in-out;
+}
+
+.product-details svg #Vector_2 {
+  stroke: var(--primary-color);
+  transition: all .3s ease-in-out;
+}
+
+.product-details svg:hover,
+svg:active #Vector {
+  fill: var(--primary-color);
+}
+
+.product-details p {
+  font-size: var(--font-size-small);
+  padding-top: 10px;
+  align-self: last baseline;
 }
 
 @media (max-width: 700px) {
