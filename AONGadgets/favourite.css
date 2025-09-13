@@ -123,3 +123,28 @@ div.mobile-menu ul a:hover {
 section {
   padding: 20px 8vw;
 }
+@media (max-width: 700px) {
+
+  .item-name,
+  .price,
+  .subtotal {
+    font-size: .7rem;
+  }
+
+  nav li.desktop {
+    display: none;
+  }
+
+  nav li.mobile {
+    display: block;
+  }
+
+  .logo-img {
+    width: 120px;
+    height: 40px;
+  }
+
+  nav ul {
+    padding: 20px 8vw;
+  }
+}
