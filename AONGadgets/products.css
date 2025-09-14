@@ -214,6 +214,6 @@ section.categories-list ul a:hover:after {
     height: fit-content;
   }
   section.categories-list ul a {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
