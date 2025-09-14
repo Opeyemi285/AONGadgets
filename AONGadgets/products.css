@@ -181,5 +181,7 @@ section.products-list {
   .products {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    overflow-x: auto;
+    overflow-y: auto;
   }
 }
