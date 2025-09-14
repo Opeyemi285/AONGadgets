@@ -134,17 +134,9 @@ main {
 section {
   padding: 0;
 }
-
-section.categories-list {
-  display: block;
-  height: 100vh;
-  width: fit-content;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
 section.categories-list ul {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0;
 }
