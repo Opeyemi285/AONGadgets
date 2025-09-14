@@ -177,3 +177,9 @@ section.products-list {
     padding: 20px 8vw;
   }
 }
+@media (max-width: 540px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
