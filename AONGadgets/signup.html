@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/login.css">
-    <title>SIGN-IN PAGE</title>
+    <link rel="stylesheet" href="/signup.css">
+    <title>SIGN-UP PAGE</title>
 </head>
 <body>
-    <main class="sign-in">
+    <main class="sign-up">
         <div class="first">
             <h1>AON Gadgets</h1>
             <p>Affordable and quality gadgets.</p>
             
-            <button type="button" class="log-option">Sign In with Google</button>
-            <button type="button" class="log-option">Sign In with Email</button>
+            <button type="button" class="log-option">Sign Up with Google</button>
+            <button type="button" class="log-option">Sign Up with Email</button>
 
             <div class="divider">
                 <hr>
@@ -21,6 +21,10 @@
                 <hr>
             </div>
 
+            <div class="star">
+                <label for="name">Name: </label>
+                <input required type="text" id="name" placeholder="Enter your name">
+            </div>            
             <div class="moon">
                 <label for="email">Email: </label>
                 <input required type="email" id="email" placeholder="Enter your email address">
@@ -29,11 +33,14 @@
                 <label for="password">Password: </label>
                 <input required type="password" id="password" placeholder="Enter your password">
             </div>
+            <div class="art">
+                <label for="password">Password Confirmation: </label>
+                <input required type="password" id="password" placeholder="Confirm your password">
+            </div>
 
-            <p class="forget"><a href="#">Forgot your password?</a></p>
 
-            <button type="submit" class="click">Sign In</button>
-            <p>Don't have an account yet? <a href="/signup.html">Sign Up for free</a></p>
+            <button type="submit" class="click">Sign Up</button>
+            <p>Already have an account? <a href="/login.html">Sign In</a></p>
         </div>
 
         <div class="second">
@@ -50,5 +57,3 @@
     </main>
 </body>
 </html>
-
-<!-- Home for affordable gadgets. -->
