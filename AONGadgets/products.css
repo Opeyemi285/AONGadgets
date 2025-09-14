@@ -123,6 +123,9 @@ div.mobile-menu ul a:hover {
 main {
   height: 100%;
 }
+section {
+  padding: 0;
+}
 
 section.categories-list {
   display: block;
