@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const mobileMenu = document.querySelector("div.mobile-menu");
       const scrollLeft = document.querySelector(".left");
       const scrollRight = document.querySelector(".right");
+      const scrollContainer = document.querySelector(".categories-list");
+      const scrollItem = document.querySelector(".list");
+      const scrollItemStyle = window.getComputedStyle(scrollItem);
+      const scrollItemMargin = scrollItem.offsetWidth + parseInt(scrollItemStyle.marginRight);
       // Show mobile menu
       menu.addEventListener("click", () => {
         mobileMenu.style.display = "flex";
