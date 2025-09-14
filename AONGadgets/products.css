@@ -173,3 +173,12 @@ section.categories-list ul a {
     padding: 20px 8vw;
   }
 }
+@media (max-width: 540px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: fit-content;
+  }
+}
