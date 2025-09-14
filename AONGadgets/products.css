@@ -153,10 +153,18 @@ section.products-list {
   gap: 20px;
   padding: 20px;
 }
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-img img {
   width: 120px;
   height: 120px;
   object-fit: contain;
+}
+.product-description {
+  text-align: center;
 }
 
 
