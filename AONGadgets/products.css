@@ -119,6 +119,14 @@ div.mobile-menu ul a:hover {
   width: 200px;
   height: 50px;
 }
+small.text-center {
+  display: block;
+}
+
+small.text-center a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
 
 main {
   height: 100%;
