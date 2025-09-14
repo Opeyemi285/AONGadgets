@@ -134,6 +134,10 @@ main {
 section {
   padding: 0;
 }
+section.categories-list {
+  display: block;
+  padding: 0 20px;
+}
 section.categories-list ul {
   display: flex;
   justify-content: space-between;
