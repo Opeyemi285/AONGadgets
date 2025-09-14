@@ -148,10 +148,6 @@ section.categories-list ul a {
   font-size: 1.1rem;
 }
 
-section.products-list {
-  margin-left: 260px;
-}
-
 @media (max-width: 700px) {
 
   .item-name,
@@ -175,14 +171,5 @@ section.products-list {
 
   nav ul {
     padding: 20px 8vw;
-  }
-}
-@media (max-width: 540px) {
-  .products {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    overflow-x: auto;
-    overflow-y: auto;
-    height: fit-content;
   }
 }
