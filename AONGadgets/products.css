@@ -149,7 +149,6 @@ section.categories-list ul a {
 }
 
 .products-list {
-  margin-top: -100px;
   margin-left: 25px;
 }
 
@@ -179,6 +178,9 @@ section.categories-list ul a {
   }
 }
 @media (max-width: 540px) {
+  .products-list {
+    margin-top: -100px;
+  }
   .products {
     display: grid;
     grid-template-columns: 1fr 2fr;
