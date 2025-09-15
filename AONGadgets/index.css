@@ -572,7 +572,6 @@ svg:active #Vector {
   font-size: 10px;
 }
 
-
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
 
@@ -779,6 +778,10 @@ svg:active #Vector {
 @media (max-width: 420px) {
   #hero {
     height: 42vh;
+  }
+
+  .categories-list .list {
+    height: 220px;
   }
 
   .products {
