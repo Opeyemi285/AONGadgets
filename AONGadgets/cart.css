@@ -168,12 +168,16 @@ button.checkout a {
   padding-left: 20px;
 }
 
+.product-img {
+  height: 90px;
+  width: 80px;
+}
 @media (max-width: 700px) {
 
   .item-name,
   .price,
   .subtotal {
-    font-size: .7rem;
+    font-size: .6rem;
   }
 
   nav li.desktop {
@@ -191,5 +195,15 @@ button.checkout a {
 
   nav ul {
     padding: 20px 8vw;
+  }
+}
+@media (max-width: 500px) {
+  div.mobile-menu {
+    width: 100vw;
+  }
+
+  .product-img {
+    height: 70px;
+    width: 60px;
   }
 }

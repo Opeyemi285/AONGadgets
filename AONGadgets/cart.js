@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       tr.innerHTML = `
         <td class="d-flex align-items-center">
-          <div><img height="90px" width="80px" src="${item.imgSrc}" alt="${item.alt}" /></div>
+          <div><img class="product-img" src="${item.imgSrc}" alt="${item.alt}" /></div>
           <div class="product-info">
             <p class="item-name">${item.name}</p>
             <p class="price">${formatPrice(item.price)}</p>
