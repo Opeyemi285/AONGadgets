@@ -198,10 +198,6 @@ button.checkout a {
   }
 }
 @media (max-width: 500px) {
-  div.mobile-menu {
-    width: 100vw;
-  }
-
   .product-img {
     height: 70px;
     width: 60px;
