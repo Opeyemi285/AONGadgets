@@ -42,7 +42,7 @@ function getProductInfo(button) {
   };
 }
 
-// Function to save cart to localStorage
+
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
   cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -52,7 +52,7 @@ function saveCart() {
   }
 }
 
-// Mobile menu handlers (unchanged)
+
 menu.addEventListener('click', () => {
   mobileMenu.style.display = 'flex';
 });
@@ -60,7 +60,7 @@ closeMenu.addEventListener('click', () => {
   mobileMenu.style.display = 'none';
 });
 
-// Scroll handlers (unchanged)
+
 scrollLeft.addEventListener("click", () => {
   scrollContainer.scrollBy({
     left: -scrollItemMargin,
@@ -75,7 +75,7 @@ scrollRight.addEventListener("click", () => {
   });
 });
 
-// Wishlist handlers (unchanged, but you could add localStorage similarly if needed)
+
 favButtons.forEach(button => {
   button.addEventListener('click', () => {
     favCounter.style.display = 'inline';
@@ -88,7 +88,7 @@ favButtons.forEach(button => {
   });
 });
 
-// Add to cart handlers (updated for dynamic cart)
+
 addToCartBtns.forEach(button => {
   button.addEventListener('click', () => {
     if (button.disabled) return; // Prevent multiple adds
