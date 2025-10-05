@@ -95,11 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       cancelBtn.addEventListener("click", () => {
-        // Remove item from cartItems array
-        cartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
-        renderCart();
-        saveCart(); // Save after removal
-      });
+        
+        cartItems = cartItems.filter((cartItem) => cartItem.id !== item.id);
+        
+        renderCart(); 
+        updateCartTotal();
+        saveCart(); 
+      });
     });
   };
 
